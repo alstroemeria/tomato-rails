@@ -1,4 +1,9 @@
 Tomato::Application.routes.draw do
+  get "tomatoes/index"
+  get "tomatoes/box_office"
+  get "tomatoes/in_theaters"
+  get "tomatoes/opening"
+  get "tomatoes/upcoming"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
