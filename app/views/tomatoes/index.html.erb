@@ -6,8 +6,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>Welcome</h1>
-                        <h3>Find the movies you want to watch</h3>
+                        <h1>Tomatoes</h1>
+                        <h3>We help you find the movies you want to watch</h3>
                         
                       
                     </div>
@@ -31,9 +31,58 @@
 
             </div>
 
-            <%for i in 1..8%>
+            <%for i in 0..7%>
                 <%movie = @box_office[i]%>
-                    <%if i.odd?%>
+                    <%if i.even?%>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2">
+                                <a href="#">
+                                    <img class="img-responsive" src=<%= movie.poster_detail %>  alt="">
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4">
+                                <h3><%= movie.title %></h3>
+                                <h4><%= movie.critics_rating %></h4>
+                                <p><%= movie.critics_consensus %></p>
+                                <a class="btn btn-primary" href=<%=movie_path(movie)%>>View Movie</a>
+                            </div>
+                        
+                    <%else%>
+                            <div class="col-lg-2 col-md-2">
+                                <a href="#">
+                                    <img class="img-responsive" src=<%= movie.poster_detail %>  alt="">
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4">
+                                <h3><%= movie.title %></h3>
+                                <h4><%= movie.critics_rating %></h4>
+                                <p><%= movie.critics_consensus %></p>
+                                <a class="btn btn-primary" href=<%=movie_path(movie)%>>View Movie</a>
+                            </div>
+                        </div>
+                        <hr> 
+                    <%end%>
+            <%end%>
+            </div>
+
+    </div>
+
+     <div class="content-section-b">
+
+        <div class="container">
+             <div class="row">
+
+                <div class="col-lg-12">
+                    <h1 class="page-header">Opening</h1>
+                </div>
+
+            </div>
+
+            <%for i in 0..3%>
+                <%movie = @opening[i]%>
+                    <%if i.even?%>
                         <div class="row">
                             <div class="col-lg-2 col-md-2">
                                 <a href="#">
