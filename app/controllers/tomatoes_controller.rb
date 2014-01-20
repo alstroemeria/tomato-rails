@@ -1,4 +1,5 @@
 class TomatoesController < ApplicationController
+  
   def index
     @box_office = Movie.where(box_office: true)
     @in_theaters = Movie.where(in_theaters: true)

@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20140120005911) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "box_office"
-    t.boolean  "in_office"
+    t.boolean  "in_theaters"
     t.boolean  "opening"
     t.boolean  "upcoming"
   end

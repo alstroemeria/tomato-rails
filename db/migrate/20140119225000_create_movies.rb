@@ -18,6 +18,11 @@ class CreateMovies < ActiveRecord::Migration
       t.string :poster_detail
       t.decimal :imdb
 
+      t.boolean :box_office
+      t.boolean :in_theaters
+      t.boolean :opening
+      t.boolean :upcoming
+
       t.timestamps
     end
   end
