@@ -11,30 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140120005911) do
+ActiveRecord::Schema.define(version: 20140119225000) do
 
   create_table "movies", force: true do |t|
     t.string   "title"
-    t.decimal  "year"
+    t.integer  "year"
     t.string   "mpaa_rating"
-    t.decimal  "runtime"
+    t.integer  "runtime"
     t.string   "critics_consensus"
     t.date     "release_date"
     t.string   "critics_rating"
-    t.decimal  "critics_score"
+    t.integer  "critics_score"
     t.string   "audience_rating"
     t.string   "audience"
-    t.decimal  "score"
+    t.integer  "score"
     t.text     "synopsis"
     t.string   "poster_thumbnail"
     t.string   "poster_detail"
-    t.decimal  "imdb"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer  "imdb"
     t.boolean  "box_office"
     t.boolean  "in_theaters"
     t.boolean  "opening"
     t.boolean  "upcoming"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

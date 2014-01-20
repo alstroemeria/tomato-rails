@@ -19,7 +19,7 @@
 
     </div>
     <!-- /.intro-header -->
-
+    <%if @box_office.count >1%>
     <div class="content-section-a">
 
         <div class="container">
@@ -80,7 +80,7 @@
 
             </div>
 
-            <%for i in 0..3%>
+            <%for i in 0..5%>
                 <%movie = @opening[i]%>
                     <%if i.even?%>
                         <div class="row">
@@ -129,7 +129,7 @@
 
             </div>
 
-            <%for i in 0..10%>
+            <%for i in 0..5%>
                 <%movie = @in_theaters[i]%>
                     <%if i.even?%>
                         <div class="row">
@@ -167,7 +167,7 @@
 
     </div>
 
- 
+    <%end%>
 
 </body>
 
