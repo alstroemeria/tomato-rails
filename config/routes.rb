@@ -1,4 +1,6 @@
 Tomato::Application.routes.draw do
+  get "movies/index"
+  get "movies/show"
   get "tomatoes/index"
   get "tomatoes/box_office"
   get "tomatoes/in_theaters"
@@ -17,7 +19,7 @@ Tomato::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+     resources :movies
 
   # Example resource route with options:
   #   resources :products do

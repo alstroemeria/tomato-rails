@@ -21,14 +21,14 @@ class TomatoWrap
 			   :year  => movie["year"],
 			   :mpaa_rating => movie["mpaa_rating"],
 			   :runtime => movie["runtime"],
-			   :critics_consensus => movie["critics_consensus"],
+			   :critics_consensus => movie["critics_consensus"] ,
 			   :release_date => movie["release_dates"]["theater"],
 			   :critics_rating => movie["ratings"]["critics_rating"],
 			   :critics_score => movie["ratings"]["critics_score"],
 			   :audience_rating => movie["ratings"]["audience_rating"],
 			   :audience => movie["ratings"]["audience_score"],
 			   :synopsis  => movie["synopsis"],
-			   :poster_thumbnail => movie["posters"]["thumbnail"],
+			   :poster_thumbnail => movie["posters"]["original"],
 			   :poster_detail => movie["posters"]["detailed"],
 			   :imdb => movie["alternate_ids"]["imdb"],
 			   sequence.to_sym => true
@@ -39,6 +39,7 @@ class TomatoWrap
 
 	def self.process_tomato
 	  
+	  update_db "opening"
 	  update_db "upcoming"
 	  update_db "box_office"
 	  update_db "in_theaters"
