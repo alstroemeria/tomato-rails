@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'HTTParty'
+require 'httparty'
 class TomatoWrap	
 	include HTTParty
 	base_uri "http://api.rottentomatoes.com/api"
